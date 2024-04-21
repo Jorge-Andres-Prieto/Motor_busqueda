@@ -7,7 +7,7 @@ class SearchApp:
     def __init__(self):
         """Inicializa la aplicación con configuraciones predeterminadas."""
         # URL directa a la versión raw de tu archivo Lottie en GitHub
-        self.lottie_url = "https://raw.githubusercontent.com/Jorge-Andres-Prieto/ppi_pl_PRIETOj/main/Motor_B%C3%BAsqueda/.streamlit/assets/Animation%20-%201713681616801.json"
+        self.lottie_url = "https://github.com/Jorge-Andres-Prieto/Motor_busqueda/blob/main/Motor_B%C3%BAsqueda/.streamlit/assets/Animation%20-%201713681616801.json"
         self.data_url = ('https://docs.google.com/spreadsheets/d/e/2PACX-1vR9IGQhDWN0qA-jon8x0'
                          'cUTap8IxvrdzGjF_kN98upNSQDeDJsI6UkpyGYOtPV18cbSB-rQzU62btO6/pub?'
                          'gid=446676900&single=true&output=csv')
