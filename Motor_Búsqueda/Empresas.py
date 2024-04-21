@@ -7,7 +7,8 @@ class SearchApp:
     def __init__(self):
         """Inicializa la aplicación con configuraciones predeterminadas."""
         # Asegúrate de reemplazar esta URL con la URL raw correcta
-        self.lottie_url = "https://raw.githubusercontent.com/Jorge-Andres-Prieto/Motor_busqueda/main/.streamlit/assets/Animation%20-%201713681616801.json"
+        self.lottie_url = ('https://raw.githubusercontent.com/Jorge-Andres-Prieto/Motor_busqueda/main/'
+                           '.streamlit/assets/Animation%20-%201713681616801.json')
         self.data_url = ('https://docs.google.com/spreadsheets/d/e/2PACX-1vR9IGQhDWN0qA-jon8x0'
                          'cUTap8IxvrdzGjF_kN98upNSQDeDJsI6UkpyGYOtPV18cbSB-rQzU62btO6/pub?'
                          'gid=446676900&single=true&output=csv')
