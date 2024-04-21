@@ -6,19 +6,26 @@ import requests  # Importar requests para cargar archivos desde URL
 class SearchApp:
     def __init__(self):
         """Inicializa la aplicación con configuraciones predeterminadas."""
-        # URL directa a la versión raw de tu archivo Lottie en GitHub
-        self.lottie_url = "https://github.com/Jorge-Andres-Prieto/Motor_busqueda/blob/main/Motor_B%C3%BAsqueda/.streamlit/assets/Animation%20-%201713681616801.json"
+        # Asegúrate de reemplazar esta URL con la URL raw correcta
+        self.lottie_url = "https://raw.githubusercontent.com/Jorge-Andres-Prieto/Motor_busqueda/main/Motor_B%C3%BAsqueda/.streamlit/assets/Animation%20-%201713681616801.json"
         self.data_url = ('https://docs.google.com/spreadsheets/d/e/2PACX-1vR9IGQhDWN0qA-jon8x0'
                          'cUTap8IxvrdzGjF_kN98upNSQDeDJsI6UkpyGYOtPV18cbSB-rQzU62btO6/pub?'
                          'gid=446676900&single=true&output=csv')
 
     def load_lottiefile(self, url: str) -> dict:
         """Carga un archivo Lottie JSON desde una URL."""
-        r = requests.get(url)
-        if r.status_code == 200:
+        try:
+            r = requests.get(url)
+            r.raise_for_status()  # Esto lanzará un error si el estado HTTP no es 200
             return r.json()
-        else:
-            return {}  # Retorna un diccionario vacío si hay error
+        except requests.RequestException as e:
+            print(f"Error al cargar Lottie JSON desde la URL: {url}")
+            print(str(e))
+            return {}
+        except requests.exceptions.JSONDecodeError:
+            print("No se pudo decodificar JSON en la respuesta.")
+            print(r.text)  # Imprimirá la respuesta para ayudar a diagnosticar el problema
+            return {}
 
     def load_data(self) -> pd.DataFrame:
         """Carga los datos desde una URL predefinida."""
