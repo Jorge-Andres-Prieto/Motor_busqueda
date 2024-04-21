@@ -1,0 +1,10 @@
+[theme]
+backgroundColor = "#4285f4"
+primaryColor = "#ffffff"
+textColor = "#000000"
+font = "sans serif"
+
+# Establece los colores de fondo y de texto para componentes específicos
+secondaryBackgroundColor = "#FFFFFF"
+textColorOnBackground = "#FFFFFF"
+textColorOnPrimary = "#4285f4"
