@@ -1,8 +1,14 @@
-import streamlit as st  # Importa Streamlit para construir interfaces de usuario
-import pandas as pd  # Importa Pandas para manejar estructuras de datos
-from streamlit_lottie import st_lottie  # Importa st_lottie para mostrar animaciones
-import requests  # Importa requests para realizar solicitudes HTTP
+# Importa Streamlit para construir interfaces de usuario
+import streamlit as st
 
+# Importa Pandas para manejar estructuras de datos
+import pandas as pd
+
+# Importa st_lottie para mostrar animaciones
+from streamlit_lottie import st_lottie
+
+# Importa requests para realizar solicitudes HTTP
+import requests
 
 class SearchApp:
     """Define una aplicación de búsqueda con funcionalidades específicas.
@@ -14,7 +20,6 @@ class SearchApp:
         None
 
     """
-
     def __init__(self):
         """
         Inicializa la aplicación con configuraciones predeterminadas, incluyendo
